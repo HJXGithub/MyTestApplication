@@ -7,78 +7,89 @@
     android:background="@color/white"
     tools:context=".MainActivity">
 
-    <hjx.android.com.legendmodule.ObservableScrollView
-        android:id="@+id/scrollView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
         android:layout_marginTop="48dp"
-        android:background="#11aaaaaa">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <LinearLayout
+        <hjx.android.com.legendmodule.ObservableScrollView
+            android:id="@+id/scrollView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:background="#11aaaaaa">
 
             <LinearLayout
-                android:id="@+id/layout_one"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/tvOne"
+                <LinearLayout
+                    android:id="@+id/layout_one"
                     android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    android:layout_below="@+id/title"
-                    android:gravity="center_vertical"
-                    android:padding="10dp"
-                    android:text="第一个模块"
-                    android:textColor="#666666" />
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvOne"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_below="@+id/title"
+                        android:gravity="center_vertical"
+                        android:padding="10dp"
+                        android:text="第一个模块"
+                        android:textColor="#666666" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvTwo"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_below="@+id/title"
+                        android:background="#00ffff"
+                        android:gravity="center_vertical"
+                        android:padding="10dp"
+                        android:text="标题Two"
+                        android:textColor="#666666" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_three"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvThree"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_below="@+id/title"
+                        android:background="#00ffff"
+                        android:gravity="center_vertical"
+                        android:padding="10dp"
+                        android:text="标题Three"
+                        android:textColor="#666666" />
+
+                    <hjx.android.com.legendmodule.RecyclerInterCeptView
+                        android:id="@+id/recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </hjx.android.com.legendmodule.RecyclerInterCeptView>
+
+                </LinearLayout>
 
             </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/layout_two"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/tvTwo"
-                    android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:layout_below="@+id/title"
-                    android:background="#00ffff"
-                    android:gravity="center_vertical"
-                    android:padding="10dp"
-                    android:text="标题Two"
-                    android:textColor="#666666" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/layout_three"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/tvThree"
-                    android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:layout_below="@+id/title"
-                    android:background="#00ffff"
-                    android:gravity="center_vertical"
-                    android:padding="10dp"
-                    android:text="标题Three"
-                    android:textColor="#666666" />
-
-            </LinearLayout>
-
-
-        </LinearLayout>
-    </hjx.android.com.legendmodule.ObservableScrollView>
-
+        </hjx.android.com.legendmodule.ObservableScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
 
     <TextView
         android:id="@+id/tvTop"
